@@ -24,6 +24,8 @@ move-vm-types = { git = "https://github.com/move-language/move", rev = "ae62d5f1
 sui-framework = { path = "../sui-framework" }
 sui-verifier = { path = "../sui-verifier" }
 sui-types = { path = "../sui-types" }
+
+[target.'cfg(not(windows))'.dependencies]
 workspace-hack = { path = "../workspace-hack"}
 
 [dev-dependencies]

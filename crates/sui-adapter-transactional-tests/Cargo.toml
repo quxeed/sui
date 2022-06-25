@@ -15,5 +15,5 @@ sui-transactional-test-runner = { path = "../sui-transactional-test-runner" }
 name = "tests"
 harness = false
 
-[dependencies]
+[target.'cfg(not(windows))'.dependencies]
 workspace-hack = { path = "../workspace-hack"}

@@ -29,4 +29,5 @@ sui-json-rpc-api = { path = "../sui-json-rpc-api" }
 
 move-core-types = { git = "https://github.com/move-language/move", rev = "ae62d5f1955a9b92c3ddd31d3cc4467f9aff76ae", features = ["address20"] }
 
+[target.'cfg(not(windows))'.dependencies]
 workspace-hack = { path = "../workspace-hack"}

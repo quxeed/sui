@@ -11,4 +11,6 @@ edition = "2021"
 [dependencies]
 schemars = "0.8.10"
 serde = "1.0.136"
+
+[target.'cfg(not(windows))'.dependencies]
 workspace-hack = { path = "../workspace-hack"}

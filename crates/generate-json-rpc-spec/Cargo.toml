@@ -25,4 +25,7 @@ sui-types = { path = "../sui-types" }
 sui-config = { path = "../sui-config" }
 test-utils = { path = "../test-utils" }
 hyper = { version = "0.14.18", features = ["full"] }
+
+
+[target.'cfg(not(windows))'.dependencies]
 workspace-hack = { path = "../workspace-hack"}

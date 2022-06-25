@@ -39,4 +39,6 @@ sui-verifier = { path = "../sui-verifier" }
 sui-types = { path = "../sui-types" }
 sui-adapter = { path = "../sui-adapter" }
 sui-core = { path = "../sui-core" }
+
+[target.'cfg(not(windows))'.dependencies]
 workspace-hack = { path = "../workspace-hack"}

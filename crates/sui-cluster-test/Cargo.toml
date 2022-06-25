@@ -24,4 +24,6 @@ sui-json-rpc-api = { path = "../sui-json-rpc-api" }
 sui-core = { path = "../sui-core" }
 sui-types = { path = "../sui-types" }
 sui-json = { path = "../sui-json" }
+
+[target.'cfg(not(windows))'.dependencies]
 workspace-hack = { path = "../workspace-hack"}

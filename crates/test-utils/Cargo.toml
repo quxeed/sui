@@ -39,4 +39,6 @@ sui-swarm = { path = "../sui-swarm" }
 sui = { path = "../sui" }
 sui-json-rpc = { path = "../sui-json-rpc" }
 sui-json-rpc-api = { path = "../sui-json-rpc-api" }
+
+[target.'cfg(not(windows))'.dependencies]
 workspace-hack = { path = "../workspace-hack"}

@@ -25,7 +25,10 @@ pub fn default_db_options(
 
     // One common issue when running tests on Mac is that the default ulimit is too low,
     // leading to I/O errors such as "Too many open files". Raising fdlimit to bypass it.
-    options.set_max_open_files((fdlimit::raise_fd_limit().unwrap() / 8) as i32);
+    if let Some(limit) = fdlimit::raise_fd_limit() {
+        // on Windoes raise_fd_limit return None
+        options.set_max_open_files((limit / 8) as i32);
+    }
 
     /* The table cache is locked for updates and this determines the number
         of shareds, ie 2^10. Increase in case of lock contentions.
